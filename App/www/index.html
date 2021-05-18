@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/vue.js"></script>
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/index_init_services.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/ionic_subpage.js"></script>
+    </head>
+
+    <body ng-app="myApp" id="app">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_87_29">
+                    <div class="tarea widget uib_w_2 d-margins" data-uib="media/text" data-ver="0" name="uib_w_2">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>&nbsp;</p>
+
+                            <h1 style="text-align: center;"><strong>Bem&nbsp;Vindo</strong></h1>
+
+                            <p style="text-align: center;"><strong>Entre ou Registra-se!</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <button onclick="btnEntrar()" class="button widget uib_w_3 d-margins ion button-calm ion-android-contact icon-left" data-uib="ionic/button" data-ver="0" id="espaco">Entrar</button>
+                    <button onclick="btnRegistrar()" class="button widget uib_w_4 d-margins ion button-balanced ion-android-add-contact icon-left" data-uib="ionic/button" data-ver="0">Registrar</button>
+                    <button onclick="btnEsqueci()" class="button widget uib_w_4 d-margins ion button-royal ion-android-star icon-left" data-uib="ionic/button" data-ver="0">Esqueci minha Senha</button>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                    <h1 class="title">Com Curseiro</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+                <div id="uib_page_1" class="upage-content vertical-col left hidden">
+                    <form id="cadastro">
+                        <label class="item item-input widget uib_w_5 d-margins" data-uib="ionic/input" data-ver="0" id="regEsp">
+                            <input name="nome" type="text" placeholder="Nome">
+                        </label>
+                        <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0">
+                            <input name="usuario" type="text" placeholder="usuário">
+                        </label>
+                        <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0">
+                            <input name="email" type="text" placeholder="email">
+                        </label>
+                        <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0">
+                            <input name="re" type="text" placeholder="RE">
+                        </label>
+                        <label class="item item-input widget uib_w_7 d-margins" data-uib="ionic/input" data-ver="0">
+                            <input name="senha" type="password" placeholder="Senha">
+                        </label>
+                        <div class="tarea widget uib_w_8 d-margins" data-uib="media/text" data-ver="0" name="uib_w_8">
+                            <div class="widget-container left-receptacle"></div>
+                            <div class="widget-container right-receptacle"></div>
+                            <div class="text-container">
+                                <h3>&nbsp;</h3>
+
+                                <h3 style="text-align: center;">TERMOS</h3>
+
+                                <p>Eu me declaro que tudo o que verei no aplicativo não será&nbsp;divulgado</p>
+                            </div>
+                        </div>
+                        <li class="item item-checkbox widget uib_w_9 d-margins" data-uib="ionic/checkbox" data-ver="0">
+                            <label class="checkbox">
+                                <input id="checkReg" type="checkbox">
+                            </label>Aceito os termos</li>
+
+                    </form>
+                    <button onclick="cadastrar()" class="button widget uib_w_14 d-margins ion button-assertive ion-android-add icon-left" data-uib="ionic/button" data-ver="0">Registrar</button>
+                </div>
+                <div id="uib_page_2" class="upage-content vertical-col left hidden">
+                    <br>
+                    <br>
+                    <br>
+                    <form id="login">
+                        <label class="item item-input widget uib_w_11 d-margins" data-uib="ionic/input" data-ver="0">
+                            <i class="icon placeholder-icon ion-android-developer ion"></i>
+                            <input name="usuario" type="text" placeholder="USUARIO">
+                        </label>
+                        <label class="item item-input widget uib_w_12 d-margins" data-uib="ionic/input" data-ver="0">
+                            <i class="icon placeholder-icon ion-asterisk ion"></i>
+                            <input name="senha" type="password" placeholder="Senha">
+                        </label>
+                        <button onclick="login()" class="button widget uib_w_13 d-margins ion button-royal ion-checkmark-round icon-left" data-uib="ionic/button" data-ver="0">Entrar</button>
+                    </form>
+                </div>
+                <div id="uib_page_8" class="upage-content vertical-col left hidden">
+                    <form id="esqueci">
+                        <label class="item item-input widget uib_w_11 d-margins" data-uib="ionic/input" data-ver="0">
+                            <i class="icon placeholder-icon ion-android-developer ion"></i>
+                            <input name="usuario" type="password" placeholder="usuario">
+                        </label>
+                        <button onclick="esqueci()" class="button widget uib_w_13 d-margins ion button-royal ion-checkmark-round icon-left" data-uib="ionic/button" data-ver="0">Redefinir senha</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="upage hidden" id="home">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_25_56">
+                    <div id="cursoList" class="list">
+
+                    </div>
+                </div>
+
+                <ion-header-bar class="bar inner-element uib_w_15 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                    <h1 class="title">Com Curseiro</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button onclick="refresh()" class="button widget uib_w_25 d-margins ion ion-ios7-refresh-empty icon-left" data-uib="ionic/button" data-ver="0"></button>
+                        <button onclick="perfil()" class="button widget uib_w_16 d-margins bar-positive bar-header ion ion-load-b icon-only" data-uib="ionic/button" data-ver="0"></button>
+                        <button onclick="logout()" class="button widget uib_w_26 d-margins ion ion-ios7-fastforward-outline" data-uib="ionic/button" data-ver="0"></button>
+
+                    </div>
+                </ion-header-bar>
+                <div id="uib_page_3" class="upage-content vertical-col left hidden">
+                    <div>
+                        <img id="imgUser" style="display: block; margin: 0 auto;" height="200px" width="200px" src="images/Strabburg.jpg" onclick="openOnImageClick()">
+                    </div>
+                    <div class="tarea widget uib_w_18 d-margins" data-uib="media/text" data-ver="0" name="uib_w_18">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div id="userInfo" style="text-align: center;" class="text-container">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="uib_page_6" class="upage-content vertical-col left hidden">
+                    <div id="materiaList" class="list">
+
+                    </div>
+                </div>
+                <div id="uib_page_7" class="upage-content vertical-col left hidden">
+                    <div id="quizList" class="list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background: orange;" class="upage hidden" id="game">
+            <div class="upage-outer fixed-header-footer">
+                <div class="upage-content ac0 content-area vertical-col left" id="uib_page_5">
+                    <div class="tarea widget uib_w_19 d-margins" data-uib="media/text" data-ver="0" name="uib_w_19">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h2 style="text-align: center;" id="gameTit"></h2>
+
+                            <p id="gameDesc"></p>
+                        </div>
+                    </div>
+                    <button onclick="iniciaJogo()" class="button widget uib_w_20 d-margins button-balanced" data-uib="ionic/button" data-ver="0">INICIAR &gt;&gt;</button>
+                    <h3 style="text-align: center;">RANKING</h3>
+                    <div id="rankingList" class="list">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="background: orange;" class="upage hidden" id="ongame">
+            <div class="upage-outer fixed-header-footer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_55_43">
+                    <div class="tarea widget uib_w_24 d-margins" data-uib="media/text" data-ver="0" name="uib_w_24">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h2 style="text-align: center;" id="gameTitOn"></h2>
+
+                            <p id="gameDescOn"></p>
+                        </div>
+                        <div class="pergunta">
+                            <h3 style="font-size: 20px;" id="perguntaGame">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        </div>
+                        <h3 id="nivelOn" style="text-align: center;">RANKING</h3>
+                    </div>
+                    <div id="respostaGame">
+
+                    </div>
+                    <div style="height: 50px;">
+                    </div>
+
+                </div>
+                <ion-footer-bar class="bar inner-element uib_w_21 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="vidasGame" class="button widget uib_w_22 d-margins ion ion-heart icon-left" data-uib="ionic/button" data-ver="0">3</button>
+                        <div class="tarea widget uib_w_23 d-margins" data-uib="media/text" data-ver="0" name="uib_w_23">
+                            <div class="widget-container left-receptacle"></div>
+                            <div class="widget-container right-receptacle"></div>
+                            <div class="text-container">
+                                <p id="pegResp">&nbsp;1/24 Perguntas &nbsp;&nbsp;&nbsp;</p>
+                            </div>
+                            <div class="upage-content ac0 content-area vertical-col left" id="page_55_43">
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="title"></h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-footer-bar>
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden" id="web">
+            <iframe id="webview" name="mobile" style="margin-top: 0px; margin-left: 0px; height: 100%; width: 100%;"></iframe>
+        </div>
+        <div class="upage vertical-col left hidden" id="pagamento">
+            <h3 style="color: red; padding: 5px;">Você não possui esse curso, mas pode adquiri-lo com os seguintes pacotes:</h3>
+            <div style="margin-top: 15px;" class="list">
+                <a style="background: #000; color: #FFF;" class="item item-avatar" onclick="pacote('https://pag.ae/bgft0rH')" href="">                      <img src="images/pacote.png">                      <h2 style="color: #FFF;">CHQAOPM</h2>                      <p>R$9,99 ao mes no contrato de 1 ano</p>                    </a>
+                <a style="background: #000; color: #FFF;" class="item item-avatar" onclick="pacote('https://pag.ae/bgft0Zw')" href="">                      <img src="images/pacote.png">                      <h2 style="color: #FFF;">CHQAOPM</h2>                      <p>R$14,99 ao mês no contrato de 6 meses</p>                    </a>
+            </div>
+        </div>
+    </body>
+
+</html>
